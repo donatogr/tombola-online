@@ -20,20 +20,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
-*.manifest
-*.spec
-pip-log.txt
-pip-delete-this-directory.txt
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-.hypothesis/
-.pytest_cache/
 
 # Django
 *.log
@@ -59,19 +45,15 @@ yarn-error.log*
 /bazel-out
 .angular
 
-# IDEs and editors
+# IDEs
 .idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-.vscode/*
-
-# Docker
-.docker/
+.vscode/
+*.swp
+*.swo
 
 # Sistema operativo
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# Docker
+.docker/ 
