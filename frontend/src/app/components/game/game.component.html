@@ -1,0 +1,39 @@
+<div class="game-container">
+  <div class="game-board">
+    <h2>Tombola</h2>
+    
+    <div class="current-number" *ngIf="currentGame">
+      <h3>Numero Estratto: {{ currentGame.current_number || '-' }}</h3>
+      <button (click)="extractNumber()">Estrai Numero</button>
+    </div>
+
+    <div class="extracted-numbers" *ngIf="currentGame">
+      <h4>Numeri Estratti:</h4>
+      <div class="numbers-grid">
+        <div *ngFor="let number of currentGame.extracted_numbers" class="number">
+          {{ number }}
+        </div>
+      </div>
+    </div>
+
+    <div class="player-card" *ngIf="playerCard">
+      <h4>La tua cartella:</h4>
+      <div class="card-grid">
+        <div *ngFor="let row of playerCard.numbers" class="card-row">
+          <div *ngFor="let number of row" class="card-number" 
+               [class.marked]="currentGame.extracted_numbers.includes(number)">
+            {{ number }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vincite -->
+    <div class="wins" *ngIf="wins.length > 0">
+        <h4>Le tue vincite:</h4>
+        <ul>
+            <li *ngFor="let win of wins">{{ win | titlecase }}</li>
+        </ul>
+    </div>
+  </div>
+</div> 

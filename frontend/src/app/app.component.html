@@ -1,0 +1,11 @@
+<nav>
+  <div class="nav-container">
+    <a routerLink="/">Home</a>
+    <div class="auth-links">
+      <a *ngIf="!isAuthenticated" routerLink="/login">Login</a>
+      <a *ngIf="isAuthenticated" (click)="logout()" style="cursor: pointer;">Logout</a>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet> 

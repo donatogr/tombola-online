@@ -1,0 +1,77 @@
+.game-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.game-board {
+  text-align: center;
+}
+
+.current-number {
+  margin: 20px 0;
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 5px;
+  margin: 20px 0;
+}
+
+.number {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+
+.card-number {
+  padding: 15px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  
+  &.marked {
+    background-color: #90EE90;
+  }
+}
+
+.wins {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    
+    h4 {
+        color: #2e7d32;
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            color: #1b5e20;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+    }
+} 

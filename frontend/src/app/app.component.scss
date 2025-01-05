@@ -1,0 +1,23 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+
+  a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      color: #0056b3;
+    }
+  }
+
+  .auth-links {
+    display: flex;
+    gap: 1rem;
+  }
+} 
